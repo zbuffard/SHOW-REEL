@@ -16,15 +16,26 @@ video {
     height: 100vh;
     object-fit: contain;
     display: block;
+    cursor: pointer;
 }
 </style>
 </head>
 
 <body>
 
-<video autoplay muted loop playsinline preload="auto">
+<video id="showreel" autoplay muted loop playsinline preload="auto">
     <source src="Video.mp4" type="video/mp4">
 </video>
+
+<script>
+const video = document.getElementById('showreel');
+
+video.addEventListener('click', () => {
+    video.muted = false;
+    video.volume = 1;
+    video.play();
+});
+</script>
 
 </body>
 </html>
