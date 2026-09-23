@@ -31,8 +31,8 @@ video {
 const video = document.getElementById('showreel');
 
 video.addEventListener('click', () => {
-    video.muted = false;
-    video.volume = 1;
+    video.muted = !video.muted;
+    video.volume = video.muted ? 0 : 1;
     video.play();
 });
 </script>
