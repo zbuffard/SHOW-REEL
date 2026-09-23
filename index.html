@@ -29,10 +29,12 @@ video {
 
 <script>
 const video = document.getElementById('showreel');
+let isMuted = true;
 
 video.addEventListener('click', () => {
-    video.muted = !video.muted;
-    video.volume = video.muted ? 0 : 1;
+    isMuted = !isMuted;
+    video.muted = isMuted;
+    video.volume = 1;
     video.play();
 });
 </script>
